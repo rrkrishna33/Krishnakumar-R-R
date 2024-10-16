@@ -11,7 +11,7 @@ from tkinter import *
 from PIL import ImageTk, Image, ImageSequence
 
 
-subscription_key = "cdfbdf50ae44415ea6b152f0ccfdd1d6"
+subscription_key = ""
 region = "eastus"
 config = speechsdk.SpeechConfig(subscription=subscription_key, region=region)
 speech_recognizer = speechsdk.SpeechRecognizer(speech_config=config)
@@ -20,9 +20,9 @@ config.speech_synthesis_voice_name = 'en-US-GuyNeural'
 speech_synthesizer = speechsdk.SpeechSynthesizer(speech_config=config, audio_config=audio_config)
 
 client = AzureOpenAI(
-    api_key="5471262c1d224ca496238d489c335028",
+    api_key="",
     api_version="2024-02-01",
-    azure_endpoint="https://globaldbaopenaiservice.openai.azure.com/"
+    azure_endpoint=""
 )
 
 deployment_name = 'gpt-4o'
@@ -73,10 +73,10 @@ def connection_to_db(sql_query):
         #connection_string = f"Driver=ODBC Driver 18 for SQL Server;Server=tcp:globaldba-sqlserver.database.windows.net,1433;Database=master;Uid=GlobalDBA;Pwd=DBAGlobal_1;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
         connection_string = (
             'DRIVER=ODBC Driver 18 for SQL Server;'
-            'SERVER=98.71.140.253,1434;'
+            'SERVER=;'
             'DATABASE=master;'
-            'UID=sa_admin;'
-            'PWD=AzureAI@123;'
+            'UID='
+            'PWD='
             'TrustServerCertificate=yes'
         )
         connection = pyodbc.connect(connection_string)
