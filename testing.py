@@ -28,6 +28,7 @@ with open(file_path, 'r') as file:
     content = file.read()
 client = AzureOpenAI(
 
+
     api_key="API_KEY",
     api_version="2024-02-01",
     azure_endpoint="Azure End point"
